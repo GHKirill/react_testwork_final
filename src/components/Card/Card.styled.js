@@ -1,10 +1,4 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { FollowUsers } from 'Redux/followTweets/selectors';
-import { useGetUsersQuery } from 'Redux/services/services';
-
-// const FollowingUsers = useSelector(FollowUsers);
 
 export const CardContainer = styled.div`
   position: relative;
