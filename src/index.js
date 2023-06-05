@@ -28,7 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <BrowserRouter basename="/react-testwork">
+          <BrowserRouter basename="/react_testwork_final">
             <App />
           </BrowserRouter>
         </PersistGate>
