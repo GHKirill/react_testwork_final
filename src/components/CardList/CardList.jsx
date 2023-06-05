@@ -6,22 +6,12 @@ import { BasicSelect } from 'components/Select/Select';
 import {
   CardListItem,
   CardListContainer,
-  NextButton,
   SelectContainer,
 } from './CardList.styled';
-import {
-  addAllContacts,
-  changeNumberCards,
-  paginationUsersNumber,
-} from 'Redux/followTweets/slice';
-import {
-  selectAllUsers,
-  selectNumberCards,
-  selectPaginationNumber,
-} from 'Redux/followTweets/selectors';
+import { addAllContacts } from 'Redux/followTweets/slice';
+import { selectAllUsers } from 'Redux/followTweets/selectors';
 import { usersToPaginate } from 'components/services/paginationUsers';
 import { PaginationButtons } from 'components/Pagination/Pagination';
-import { useGetUsersQuery } from 'Redux/services/services';
 
 export const CardList = ({ data }) => {
   const [usersType, setUsersType] = useState('all');
@@ -41,7 +31,6 @@ export const CardList = ({ data }) => {
   }, [data, dispatch]);
 
   const handleSelect = type => {
-    const paginationUsers = usersToPaginate(usersType, users, followingUsers);
     setUsersType(type);
     setPage(1);
     // setUsersFiltered(paginationUsers);
