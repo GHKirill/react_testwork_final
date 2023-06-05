@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/react_testwork_final/static/css/main.7acaea2f.css",
-    "main.js": "/react_testwork_final/static/js/main.07d3183d.js",
+    "main.css": "/react_testwork_final/static/css/main.3cda3696.css",
+    "main.js": "/react_testwork_final/static/js/main.c8669767.js",
+    "static/media/pexels-fauxels-3184325.jpg": "/react_testwork_final/static/media/pexels-fauxels-3184325.1f69150696be4f83ddeb.jpg",
+    "static/media/Quest_tick.png": "/react_testwork_final/static/media/Quest_tick.032662a2a907475127d7.png",
     "index.html": "/react_testwork_final/index.html",
-    "main.7acaea2f.css.map": "/react_testwork_final/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/react_testwork_final/static/js/main.07d3183d.js.map"
+    "main.3cda3696.css.map": "/react_testwork_final/static/css/main.3cda3696.css.map",
+    "main.c8669767.js.map": "/react_testwork_final/static/js/main.c8669767.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.3cda3696.css",
+    "static/js/main.c8669767.js"
   ]
 }
