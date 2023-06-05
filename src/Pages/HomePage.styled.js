@@ -8,7 +8,7 @@ export const Container = styled.div`
   gap: 20px;
   width: 400px;
   margin: 0 auto;
-  padding-top: 200px;
+  padding-top: 250px;
 `;
 export const Text = styled.div`
   font-family: 'Montserrat';
