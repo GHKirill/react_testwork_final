@@ -6,11 +6,6 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export const BasicSelect = ({ usersType, chooseSelect }) => {
-  // const [usersType, setUsersType] = React.useState('All Users');
-
-  // const handleChange = event => {
-  //   setUsersType(event.target.value);
-  // };
   const handleChange = event => {
     chooseSelect(event.target.value);
   };

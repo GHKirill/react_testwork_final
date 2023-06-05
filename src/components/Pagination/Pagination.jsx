@@ -1,7 +1,6 @@
-import { Pagination, Stack,} from '@mui/material';
+import { Pagination, Stack } from '@mui/material';
 
 export const PaginationButtons = ({ usersFiltered, page, changePage }) => {
-  console.log(usersFiltered);
   return (
     <Stack spacing={2}>
       {usersFiltered.length && (

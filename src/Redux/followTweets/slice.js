@@ -1,21 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// const initialState = [];
-
-// const followSlice = createSlice({
-//   name: 'follow',
-//   initialState,
-//   reducers: {
-//     changeFollowStatus(state, action) {
-//       return state.includes(action.payload)
-//         ? state.filter(item => item !== action.payload)
-//         : [...state, action.payload];
-//     },
-//   },
-// });
-// export const FollowReducer = followSlice.reducer;
-// export const { changeFollowStatus } = followSlice.actions;
-
 const initialState = {
   follow: [],
   allContacts: [],
@@ -51,26 +35,6 @@ const followSlice = createSlice({
           : [...state.allContacts, ...action.payload],
       };
     },
-    // addFollowersNumber(state, action) {
-    //   return {
-    //     ...state,
-    //     allContacts: state.allContacts.map(item => {
-    //       return item.id === action.payload
-    //         ? { ...item, followers: item.followers + 1 }
-    //         : item;
-    //     }),
-    //   };
-    // },
-    // deсFollowersNumber(state, action) {
-    //   return {
-    //     ...state,
-    //     allContacts: state.allContacts.map(item => {
-    //       return item.id === action.payload
-    //         ? { ...item, followers: item.followers - 1 }
-    //         : item;
-    //     }),
-    //   };
-    // },
     changeFollowersNumber(state, action) {
       const { id, currentFollowersNumber } = action.payload;
       return {
@@ -95,8 +59,6 @@ export const {
   changeFollowStatus,
   changeNumberCards,
   addAllContacts,
-  // addFollowersNumber,
-  // deсFollowersNumber,
   changeFollowersNumber,
   paginationUsersNumber,
 } = followSlice.actions;

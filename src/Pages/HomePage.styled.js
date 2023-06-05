@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
 import { NavLink } from 'react-router-dom';
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@ export const Container = styled.div`
   gap: 20px;
   width: 400px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 200px;
 `;
 export const Text = styled.div`
   font-family: 'Montserrat';

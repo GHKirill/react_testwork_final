@@ -15,15 +15,10 @@ import { PaginationButtons } from 'components/Pagination/Pagination';
 
 export const CardList = ({ data }) => {
   const [usersType, setUsersType] = useState('all');
-  // const [usersFiltered, setUsersFiltered] = useState([]);
   const [page, setPage] = useState(1);
-
   const users = useSelector(selectAllUsers);
   const followingUsers = useSelector(FollowUsers);
   const paginationUsers = usersToPaginate(usersType, users, followingUsers);
-  //==========================
-  // const [usersFiltered, setUsersFiltered] = useState(paginationUsers);
-  //=========================
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -33,7 +28,6 @@ export const CardList = ({ data }) => {
   const handleSelect = type => {
     setUsersType(type);
     setPage(1);
-    // setUsersFiltered(paginationUsers);
   };
 
   const handlePagination = page => {
@@ -45,23 +39,11 @@ export const CardList = ({ data }) => {
     page === Math.ceil(paginationUsers % 3) && paginationUsers % 3 !== 0
       ? (page - 1) * 3 + (paginationUsers % 3)
       : (page - 1) * 3 + 3;
-  console.log(page);
   const calcLastUsersAllPage =
     paginationUsers / 3 <= 1 ? paginationUsers.length - 1 : calcLastUsersPage;
-  //================================
-  // const currentNumber = useSelector(selectNumberCards);
-
-  // const potentialNumber = users.length - currentNumber;
-
-  // const nextButtonHandle = () => {
-  //   const additionalNumber = potentialNumber > 3 ? 3 : potentialNumber;
-  //   dispatch(changeNumberCards(additionalNumber));
-  //   return additionalNumber;
-  // };
 
   return (
     <>
-      {/* {users.slice(0, currentNumber).map(item => ( */}
       <CardListContainer>
         {paginationUsers
           .slice(calcStartUsersPage, calcLastUsersAllPage)
@@ -94,11 +76,6 @@ export const CardList = ({ data }) => {
           chooseSelect={type => handleSelect(type)}
         />
       </SelectContainer>
-      {/* <PaginationButtons
-        usersFiltered={paginationUsers}
-        page={page}
-        changePage={page => handlePagination(page)}
-      /> */}
     </>
   );
 };
